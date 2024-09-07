@@ -7,14 +7,19 @@ package solution;
  */
 public class myArrayListRealisation<T extends Comparable<T>> {
 
-    private Object[] array;
+    private T[] array;
     private int size;
+
+    public myArrayListRealisation() {
+        this.array = (T[]) new Object[10]; // Инициализируем массив с начальным размером 10
+        this.size = 0;
+    }
 
     /**
      * Constructs an empty list with an initial capacity of 10.
      */
     public void MyArrayList() {
-        this.array = new Object[10];
+        this.array = new T[10];
         this.size = 0;
     }
 
@@ -25,11 +30,16 @@ public class myArrayListRealisation<T extends Comparable<T>> {
      * @param element the element to be added to this list
      */
     public void add(T element) {
-        if (size == array.length) {
-            increaseCapacity();
+        if (size == array.length) { // Если массив заполнен
+            T[] newArray = (T[]) new Object[array.length * 2]; // Увеличиваем размер массива в 2 раза
+            for (int i = 0; i < array.length; i++) {
+                newArray[i] = array[i];
+            }
+            array = newArray; // Присваиваем новый массив
         }
-        array[size++] = element;
+        array[size++] = element; // Добавляем элемент в массив
     }
+
 
     /**
      * Increases the capacity of this ArrayList instance, if necessary, to ensure
