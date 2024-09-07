@@ -6,6 +6,7 @@ package solution;
  * @param <T> the type of elements in this list
  */
 public class myArrayListRealisation<T extends Comparable<T>> {
+
     private Object[] array;
     private int size;
 
@@ -64,7 +65,7 @@ public class myArrayListRealisation<T extends Comparable<T>> {
      * @param element the element to be stored at the specified position
      * @throws IndexOutOfBoundsException if the index is out of range (index < 0 || index >= size())
      */
-    @SuppressWarnings("unchecked")
+
     public void set(int index, T element) {
         if (index < 0 || index >= size) {
             throw new IndexOutOfBoundsException();

@@ -3,7 +3,7 @@ package solution;
 public class Main {
     public static void main(String[] args) {
         // Create a MyArrayList and add some elements
-        MyArrayList <Integer> list = new MyArrayList<>();
+        myArrayListRealisation <Integer> list = new myArrayListRealisation<>();
         list.add(5);
         list.add(2);
         list.add(8);
@@ -26,4 +26,3 @@ public class Main {
         System.out.println("List after setting an element: " + list);
     }
 }
-

@@ -43,7 +43,7 @@ public class quickSortRealisation {
      * @param right the index of the rightmost element of the range to be partitioned
      * @return the index of the pivot element
      */
-    @SuppressWarnings("unchecked")
+
     private static <T extends Comparable<T>> int partition(myArrayListRealisation<T> list, int left, int right) {
         T pivot = (T) list.get(right);
         int i = left - 1;
@@ -65,7 +65,8 @@ public class quickSortRealisation {
      * @param i    the index of the first element to be swapped
      * @param j    the index of the second element to be swapped
      */
-    @SuppressWarnings("unchecked")
+
+
     private static <T extends Comparable<T>> void swap(myArrayListRealisation<T> list, int i, int j) {
         T temp = (T) list.get(i);
         list.set(i, list.get(j));
