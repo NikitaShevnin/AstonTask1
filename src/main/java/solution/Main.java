@@ -9,6 +9,7 @@ public class Main {
         list.add(8);
         list.add(1);
         list.add(9);
+        list.add(7);
 
         System.out.println("Initial list: " + list);
 
